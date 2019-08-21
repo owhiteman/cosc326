@@ -1,0 +1,38 @@
+public class PrimeDays{
+
+    public static void main(String[]args){
+
+	int totalDays = 0;
+	int sizeOfMonth = 0;
+	int month = 0;
+
+	for(String m : args){
+	    sizeOfMonth = Integer.parseInt(args[month]);
+	    month++;
+	    if(isPrime(month)){
+		for(int j = 1; j <= sizeOfMonth; j++){
+		    totalDays++;
+		    if(isPrime(j) && isPrime(totalDays)){
+			System.out.println(totalDays + ": " + month + " " + j);
+		    }
+		}
+	    }else{
+		totalDays += sizeOfMonth;
+	    }
+	}
+
+    }
+			        
+
+    public static boolean isPrime(int x){
+	if(x > 1){
+	    for(int i = 2; i < x/2; i++){
+		if(x % i == 0){
+		    return false;
+		}
+	    }
+	}else if(x == 1 || x == 4) return false;
+	return true;
+    }
+
+}
