@@ -1,0 +1,2 @@
+Takes in a text file with multiple lines of possible poker hands, five cards separated by a '-', '/' or ' '. Will format and
+return the hand if it is an acceptable hand, otherwise it will return invalid with the original string.
